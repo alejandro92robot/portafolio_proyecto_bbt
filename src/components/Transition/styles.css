@@ -1,0 +1,15 @@
+/* styles.css */
+.message-enter {
+    opacity: 0;
+}
+.message-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+.message-exit {
+    opacity: 1;
+}
+.message-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
