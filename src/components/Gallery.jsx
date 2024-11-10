@@ -1,6 +1,9 @@
 import React from "react";
 import { Box } from "@mui/material";
 import ArticleCard from "./ArticleCard";
+import proyecto from '../img/abp_picture.jpg'
+import totem from '../img/totem_picture.jpg'
+import library from '../img/library_view.jpg'
 const Gallery = () => {
     return (
         <Box
@@ -12,9 +15,9 @@ const Gallery = () => {
                 width: '100%' // Asegura que el contenedor ocupe el ancho completo
             }}
         >
-            <ArticleCard />
-            <ArticleCard />
-            <ArticleCard />
+            <ArticleCard picture={totem}/>
+            <ArticleCard picture={proyecto}/>
+            <ArticleCard picture={library}/>
         </Box>
     )
 }

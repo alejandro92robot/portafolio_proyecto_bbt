@@ -6,7 +6,7 @@ const Introduction = (secRef) => {
         <Container maxWidth="lg">
             <Box
                 sx={{
-                    padding: 6,
+                    padding: { xs: 3, md: 6 }, // Ajuste de padding responsivo
                     backgroundColor: '#f4f4f9',
                     borderRadius: 3,
                     boxShadow: 3,
@@ -26,6 +26,7 @@ const Introduction = (secRef) => {
                         color: '#3f51b5',
                         fontFamily: '"Roboto", sans-serif',
                         letterSpacing: 1,
+                        fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }, // Tamaño de fuente responsivo
                     }}
                 >
                     BIBLIOTECA INTELIGENTE
@@ -34,24 +35,22 @@ const Introduction = (secRef) => {
                 <Typography
                     variant="h6"
                     sx={{
-                        marginBottom: 4,
+                        marginBottom: { xs: 3, md: 4 },
                         fontWeight: 400,
                         color: '#555',
                         fontFamily: '"Roboto", sans-serif',
                         lineHeight: 1.6,
+                        fontSize: { xs: '0.9rem', sm: '1rem', md: '1.15rem' }, // Tamaño de fuente responsivo
+                        paddingX: { xs: 2, sm: 5, md: 10 }, // Ajuste de padding lateral en pantallas grandes
                     }}
                 >
-                    En la era digital actual, la forma en que accedemos al conocimiento está cambiando rápidamente. Sin embargo, las bibliotecas escolares no han evolucionado al ritmo de estos avances, limitando su capacidad para servir como un centro vibrante de aprendizaje y descubrimiento. La biblioteca, que aún se basa en recursos impresos tradicionales, no cumple con las expectativas modernas de los estudiantes, quienes buscan experiencias más dinámicas e interactivas.
-                    El proyecto Biblioteca Inteligente se propone transformar esta realidad al introducir innovaciones tecnológicas y modernizar el inventario de la biblioteca. Nuestro objetivo es convertir la biblioteca en un espacio moderno y atractivo, donde la tecnología y la accesibilidad se unan para mejorar la experiencia de lectura y aprendizaje. La iniciativa incluye la implementación de una plataforma web para la gestión de préstamos mediante códigos QR y un sistema de iluminación inteligente para facilitar la búsqueda de libros.
-
-                </Typography>
-
+El proyecto Biblioteca Inteligente busca modernizar las bibliotecas escolares, que aún dependen de recursos impresos tradicionales, para adaptarse a las necesidades de los estudiantes actuales, quienes buscan experiencias más dinámicas e interactivas. La iniciativa incluye la incorporación de tecnología, como una plataforma web para gestionar préstamos mediante códigos QR y un sistema de iluminación inteligente, con el objetivo de crear un espacio moderno y accesible que mejore la experiencia de lectura y aprendizaje.                </Typography>
                 <Button
                     variant="contained"
                     color="primary"
                     sx={{
-                        padding: '12px 30px',
-                        fontSize: '16px',
+                        padding: { xs: '10px 20px', sm: '12px 30px' }, // Ajuste de padding responsivo
+                        fontSize: { xs: '14px', sm: '16px' }, // Tamaño de fuente responsivo
                         borderRadius: 20,
                         fontWeight: 'bold',
                         letterSpacing: 1,

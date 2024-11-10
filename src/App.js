@@ -1,23 +1,16 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Box } from '@mui/material';
 import Header from './components/Header';
 import IntroSection from './components/IntroSection';
 import FeaturesSection from './components/FeaturesSection';
 import Gallery from './components/Gallery';
-import TechDetails from './components/TechDetails';
-import GameSection from './components/GameSection';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ArticleCard from './components/ArticleCard';
-
+import './App.css'
 function App() {
-  // Crear referencias para cada sección
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
-  const section3Ref = useRef(null);
 
-  // Función para hacer scroll a una sección específica
   const scrollToSection = (sectionRef) => {
     sectionRef.current.scrollIntoView({
       behavior: 'smooth',
@@ -28,15 +21,18 @@ function App() {
   return (
     <Router>
       <Header />
-      <IntroSection secRef={section1Ref}/>
-      <FeaturesSection />
-      <Gallery />
-      {/*  
-     
-      
-      <TechDetails />
-      <GameSection />
-      <Contact />*/}
+      <Box
+        sx={{
+          padding: { xs: '10px', sm: '20px', md: '40px' },  // Responsividad en márgenes
+          width: '100%', // Ancho 100% en móviles
+          maxWidth: '70%', // Limitado al 70% en pantallas grandes
+          marginX: 'auto',  // Centrado
+        }}
+      >
+        <IntroSection secRef={section1Ref} />
+        <FeaturesSection />
+        <Gallery />
+      </Box>
       <Footer />
     </Router>
   );
