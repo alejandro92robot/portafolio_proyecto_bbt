@@ -74,23 +74,24 @@ const Info = () => {
 
             {/* Contenedor de la imagen */}
             <Box
-                sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    marginTop: { xs: '30px', md: '50px' },
-                }}
-            >
-                <Box
-                    component="img"
-                    src={logo}
-                    alt="Logo de la biblioteca"
-                    sx={{
-                        width: { xs: '50%', sm: '35%', md: '25%' }, // Ajuste de tamaño de imagen responsivo
-                        margin: '25px',
-                        borderRadius: '20px',
-                    }}
-                />
-            </Box>
+    sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        marginTop: { xs: '30px', md: '15px' },
+    }}
+>
+    <Box
+        component="img"
+        src={logo}
+        alt="Logo de la biblioteca"
+        sx={{
+            width: { xs: '50%', sm: '35%', md: '20%' }, // Reducido al 20% en desktop
+            margin: '25px',
+            borderRadius: '20px',
+        }}
+    />
+</Box>
+
         </>
     );
 };
