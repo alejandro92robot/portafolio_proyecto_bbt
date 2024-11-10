@@ -29,7 +29,7 @@ function App() {
           marginX: 'auto',  // Centrado
         }}
       >
-        <IntroSection secRef={section1Ref} />
+        {/* <IntroSection secRef={section1Ref} /> */}
         <FeaturesSection />
         <Gallery />
       </Box>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../img/ABS_logo.png';
+import logo from '../img/bibliotech.png';
 import { Typography, Button, Box } from '@mui/material';
 import AppBarLibrary from '../components/AppBar';
 import Transition from '../components/Transition/Transition';

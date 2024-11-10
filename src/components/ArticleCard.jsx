@@ -3,7 +3,7 @@ import { Box, Typography, Grid, IconButton } from '@mui/material';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 
-const ArticleCard = ({picture}) => {
+const ArticleCard = ({ picture, category, title, description, author }) => {
     return (
         <Box
             sx={{
@@ -21,7 +21,7 @@ const ArticleCard = ({picture}) => {
                 <Grid item xs={12} md={4}>
                     <Box
                         component="img"
-                        src={picture} // Reemplaza con la URL de la imagen deseada
+                        src={picture} // Recibe la imagen desde props
                         alt="Imagen de artículo"
                         sx={{
                             width: '100%',
@@ -36,7 +36,7 @@ const ArticleCard = ({picture}) => {
                     <Box sx={{ padding: { xs: 2, md: 3 } }}>
                         {/* Categoría */}
                         <Typography variant="subtitle2" sx={{ color: 'orange', fontWeight: 'bold' }}>
-                        MODERNIZACIÓN TECNOLÓGICA
+                            {category} {/* Categoría recibida desde props */}
                         </Typography>
 
                         {/* Título */}
@@ -48,7 +48,7 @@ const ArticleCard = ({picture}) => {
                                 fontSize: { xs: '1rem', md: '1.25rem' }, // Ajusta tamaño del título
                             }}
                         >
-                            Implementación de un tótem táctil 
+                            {title} {/* Título recibido desde props */}
                         </Typography>
 
                         {/* Descripción */}
@@ -60,8 +60,7 @@ const ArticleCard = ({picture}) => {
                                 display: { xs: 'none', sm: 'block' }, // Oculta en pantallas XS
                             }}
                         >
-La integración de un sistema de gestión de préstamos que permitirá a los estudiantes solicitar y devolver libros mediante códigos QR, con autenticación basada en su RUT.
-Implementación de un sistema de gamificación para incentivar el uso de la biblioteca mediante la acumulación de puntos de experiencia y rangos, ofreciendo recompensas y privilegios a los estudiantes más activos. 
+                            {description} {/* Descripción recibida desde props */}
                         </Typography>
 
                         {/* Autor */}
@@ -73,7 +72,7 @@ Implementación de un sistema de gamificación para incentivar el uso de la bibl
                                 fontSize: { xs: '0.8rem', md: '1rem' },
                             }}
                         >
-                            Alejandro Aguilera
+                            {author} {/* Autor recibido desde props */}
                         </Typography>
                     </Box>
                 </Grid>

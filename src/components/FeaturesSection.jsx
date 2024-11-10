@@ -4,68 +4,10 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { Box, Typography, Card, CardContent, Stepper, Step, StepLabel, Avatar } from '@mui/material';
 import { EmojiEvents as TrophyIcon, Book as BookIcon, School as SchoolIcon } from '@mui/icons-material';
 
-const FeatureCard = ({ icon, title, description }) => (
-  <Box
-    sx={{
-      display: 'flex',
-      flexDirection: { xs: 'column', sm: 'row' },
-      alignItems: 'center',
-      margin: { xs: '10px 0', sm: '20px 0' },
-      textAlign: { xs: 'center', sm: 'left' },
-      width: '100%', // Prevent overflow
-      maxWidth: '100%', // Prevent overflow
-      boxSizing: 'border-box', // Ensures padding/margins are accounted for
-    }}
-  >
-    <Box sx={{ marginRight: { sm: '20px' }, marginBottom: { xs: '10px', sm: 0 } }}>
-      {icon}
-    </Box>
-    <Box>
-      <Typography
-        variant="h6"
-        sx={{
-          color: '#6A1B9A',
-          fontWeight: 'bold',
-          fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
-          wordWrap: 'break-word',
-          overflowWrap: 'break-word', // Prevent overflow
-        }}
-      >
-        {title}
-      </Typography>
-      <Typography
-        variant="body1"
-        sx={{
-          color: '#333',
-          fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
-          overflowWrap: 'break-word',
-          wordBreak: 'break-word', // Prevent text overflow
-          maxWidth: '100%', // Prevent overflow
-          textOverflow: 'ellipsis', // Handle overflow gracefully
-        }}
-      >
-        {description}
-      </Typography>
-    </Box>
-  </Box>
-);
-
 const LibraryFeatures = () => {
   return (
-    <Box
-      sx={{
-        padding: { xs: '10px', sm: '20px', md: '30px' }, // Adjust padding for small screens
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        maxWidth: '100%',
-        marginX: 'auto',
-        width: '100%', // Make sure width is always 100%
-        boxSizing: 'border-box',  // Ensure margins and paddings are considered in width calculation
-      }}
-    >
+
       <BibliotechStory />
-    </Box>
   );
 };
 
@@ -96,20 +38,6 @@ const BibliotechStory = () => {
   ];
 
   return (
-    <Box
-      sx={{
-        width: '100%',
-        padding: { xs: '15px', sm: '20px', md: '30px' }, // Adjust padding for small screens
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: '#f3f4f6',
-        boxShadow: '0px 10px 30px rgba(0,0,0,0.1)',
-        margin: '0 auto',
-        maxWidth: '100%', // Prevent overflow
-        boxSizing: 'border-box', // Ensures padding is considered
-      }}
-    >
       <Stepper orientation="vertical" activeStep={-1} connector={null}>
         {steps.map((step, index) => (
           <Step key={index}>
@@ -158,6 +86,5 @@ const BibliotechStory = () => {
           </Step>
         ))}
       </Stepper>
-    </Box>
   );
 };
