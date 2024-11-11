@@ -129,7 +129,8 @@ const Gallery = () => {
                 flexDirection: 'column',
                 alignItems: 'center', // Centra el contenido en el eje horizontal
                 gap: 2, // Espacio entre cada tarjeta
-                width: '100%' // Asegura que el contenedor ocupe el ancho completo
+                width: '100%' ,// Asegura que el contenedor ocupe el ancho completo
+                marginTop: '50px'
             }}
         >
             {articles.map((article, index) => (

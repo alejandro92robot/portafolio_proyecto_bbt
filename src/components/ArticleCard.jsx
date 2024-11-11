@@ -1,104 +1,100 @@
 import React from 'react';
-import { Box, Typography, Grid, IconButton } from '@mui/material';
+import { Box, Typography, IconButton, Card, CardContent } from '@mui/material';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 
 const ArticleCard = ({ picture, category, title, description, author }) => {
     return (
-        <Box
+        <Card
             sx={{
-                border: '1px solid #e0e0e0',
-                borderRadius: 2,
+                background: 'linear-gradient(135deg, #FFFFFF 40%, #E0F7FA)',
+                boxShadow: '0px 4px 20px rgba(0,0,0,0.15)',
+                borderRadius: '12px',
                 overflow: 'hidden',
-                maxWidth: { xs: '100%', sm: 600, md: 1050 },
-                backgroundColor: '#fff',
-                boxShadow: 3,
-                margin: 'auto', // Centrado en pantallas más pequeñas
+                maxWidth: { xs: '100%', sm: 600, md: 900 },
+                margin: 'auto',
+                transition: 'transform 0.3s ease',
+                '&:hover': {
+                    transform: 'scale(1.02)',
+                },
+                display: 'flex',
+                flexDirection: { xs: 'column', md: 'row' },
             }}
         >
-            <Grid container spacing={0}>
-                {/* Imagen */}
-                <Grid item xs={12} md={4}>
-                    <Box
-                        component="img"
-                        src={picture} // Recibe la imagen desde props
-                        alt="Imagen de artículo"
-                        sx={{
-                            width: '100%',
-                            height: { xs: 200, md: '100%' }, // Ajusta la altura en pantallas pequeñas
-                            objectFit: 'cover',
-                        }}
-                    />
-                </Grid>
-
-                {/* Contenido de la Tarjeta */}
-                <Grid item xs={12} md={7}>
-                    <Box sx={{ padding: { xs: 2, md: 3 } }}>
-                        {/* Categoría */}
-                        <Typography variant="subtitle2" sx={{ color: 'orange', fontWeight: 'bold' }}>
-                            {category} {/* Categoría recibida desde props */}
-                        </Typography>
-
-                        {/* Título */}
-                        <Typography
-                            variant="h6"
-                            sx={{
-                                fontWeight: 'bold',
-                                marginTop: 1,
-                                fontSize: { xs: '1rem', md: '1.25rem' }, // Ajusta tamaño del título
-                            }}
-                        >
-                            {title} {/* Título recibido desde props */}
-                        </Typography>
-
-                        {/* Descripción */}
-                        <Typography
-                            variant="body2"
-                            sx={{
-                                marginTop: 1,
-                                color: 'text.secondary',
-                                display: { xs: 'none', sm: 'block' }, // Oculta en pantallas XS
-                            }}
-                        >
-                            {description} {/* Descripción recibida desde props */}
-                        </Typography>
-
-                        {/* Autor */}
-                        <Typography
-                            variant="body2"
-                            sx={{
-                                color: 'primary.main',
-                                marginTop: 2,
-                                fontSize: { xs: '0.8rem', md: '1rem' },
-                            }}
-                        >
-                            {author} {/* Autor recibido desde props */}
-                        </Typography>
-                    </Box>
-                </Grid>
-            </Grid>
-
-            {/* Iconos de Comentarios y Vistas */}
+            {/* Imagen */}
             <Box
+                component="img"
+                src={picture}
+                alt="Imagen de artículo"
                 sx={{
+                    width: { xs: '100%', md: '35%' },
+                    height: { xs: 200, md: '100%' },
+                    objectFit: 'cover',
+                }}
+            />
+
+            {/* Contenido */}
+            <CardContent
+                sx={{
+                    padding: { xs: 2, md: 3 },
+                    flex: 1,
                     display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'flex-end',
-                    padding: { xs: 1, md: 2 },
-                    borderTop: '1px solid #e0e0e0',
-                    color: 'text.secondary',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
                 }}
             >
-                <IconButton size="small">
-                    <ChatBubbleOutlineIcon fontSize="small" />
-                    <Typography variant="caption" sx={{ marginLeft: 0.5 }}>9</Typography>
-                </IconButton>
-                <IconButton size="small">
-                    <VisibilityIcon fontSize="small" />
-                    <Typography variant="caption" sx={{ marginLeft: 0.5 }}>274</Typography>
-                </IconButton>
-            </Box>
-        </Box>
+                {/* Encabezado */}
+                <Box>
+                    <Typography variant="subtitle2" sx={{ color: '#FF7043', fontWeight: 'bold' }}>
+                        {category}
+                    </Typography>
+
+                    <Typography
+                        variant="h6"
+                        sx={{
+                            fontWeight: 'bold',
+                            marginTop: 1,
+                            color: '#3F51B5',
+                            fontSize: { xs: '1rem', md: '1.25rem' },
+                        }}
+                    >
+                        {title}
+                    </Typography>
+
+                    <Typography
+                        variant="body2"
+                        sx={{
+                            marginTop: 1,
+                            color: 'text.secondary',
+                            display: { xs: 'none', sm: 'block' },
+                            fontSize: { xs: '0.9rem', md: '1rem' },
+                        }}
+                    >
+                        {description}
+                    </Typography>
+                </Box>
+
+                {/* Autor e Iconos */}
+                <Box sx={{ marginTop: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <Typography
+                        variant="body2"
+                        sx={{ color: 'primary.main', fontSize: { xs: '0.8rem', md: '1rem' } }}
+                    >
+                        {author}
+                    </Typography>
+                    <Box sx={{ display: 'flex', alignItems: 'center', color: 'text.secondary' }}>
+                        <IconButton size="small" sx={{ color: 'inherit' }}>
+                            <ChatBubbleOutlineIcon fontSize="small" />
+                            <Typography variant="caption" sx={{ marginLeft: 0.5 }}>9</Typography>
+                        </IconButton>
+                        <IconButton size="small" sx={{ color: 'inherit' }}>
+                            <VisibilityIcon fontSize="small" />
+                            <Typography variant="caption" sx={{ marginLeft: 0.5 }}>274</Typography>
+                        </IconButton>
+                    </Box>
+                </Box>
+            </CardContent>
+        </Card>
     );
 };
 

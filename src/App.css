@@ -1,15 +1,38 @@
-body {
+/* app.css */
+html, body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-size: 2rem;
+/* También puedes restablecer los márgenes y rellenos para todos los elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.5rem;
+
+/* Animación de aumento */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1); /* Escala inicial */
+    opacity: 0.8; /* Ligero desvanecimiento al inicio */
+  }
+  50% {
+    transform: scale(1.1); /* Aumento del tamaño */
+    opacity: 1; /* Totalmente visible */
+  }
+  100% {
+    transform: scale(1); /* Vuelve al tamaño original */
+    opacity: 0.8; /* Desvanecimiento gradual */
   }
 }
+
+.image-animation {
+  animation: zoomInOut 4s ease-in-out infinite; /* Repite infinitamente */
+}
+
+
+

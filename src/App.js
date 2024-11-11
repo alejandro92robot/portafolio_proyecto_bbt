@@ -6,6 +6,7 @@ import IntroSection from './components/IntroSection';
 import FeaturesSection from './components/FeaturesSection';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
+import ProjectMethodology from './components/ProjectMethodology';
 import './App.css'
 function App() {
   const section1Ref = useRef(null);
@@ -23,15 +24,16 @@ function App() {
       <Header />
       <Box
         sx={{
-          padding: { xs: '10px', sm: '20px', md: '40px' },  // Responsividad en márgenes
+          padding: { xs: '0px', sm: '20px', md: '40px' },  // Responsividad en márgenes
           width: '100%', // Ancho 100% en móviles
-          maxWidth: '70%', // Limitado al 70% en pantallas grandes
-          marginX: 'auto',  // Centrado
+          maxWidth: '100%', // Limitado al 70% en pantallas grandes
+          marginX: '0 auto',  // Centrado
         }}
       >
         {/* <IntroSection secRef={section1Ref} /> */}
         <FeaturesSection />
         <Gallery />
+        <ProjectMethodology/>
       </Box>
       <Footer />
     </Router>
