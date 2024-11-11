@@ -26,7 +26,7 @@ const ProjectMethodology = () => {
                 sx={{
                     fontWeight: 'bold',
                     color: '#3F51B5',
-                    fontSize: { xs: '.5rem', sm: '1rem', md: '1.5rem' },
+                    fontSize: { xs: '1rem', sm: '1rem', md: '1.5rem' },
                     textAlign: 'left',
                     marginBottom: 3,
                 }}

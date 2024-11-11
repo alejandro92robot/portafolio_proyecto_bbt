@@ -65,7 +65,7 @@ const BibliotechStory = () => {
                 sx={{
                   fontWeight: 'bold',
                   color: '#0077b6',
-                  textAlign: { xs: 'center', sm: 'left' },
+                  textAlign: { xs: 'left', sm: 'left' },
                   fontSize: { xs: '1.2rem', sm: '1.5rem' },
                   marginY: 1,
                 }}
