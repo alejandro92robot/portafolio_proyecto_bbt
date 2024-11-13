@@ -65,6 +65,7 @@ const Info = () => {
                 fontSize: { xs: '0.8rem', md: '1rem' }, // Ajuste de tamaño de fuente del botón
                 paddingX: { xs: 2, md: 4 }, // Ajuste de padding horizontal en el botón
                 paddingY: { xs: 1, md: 1.5 },
+                marginBottom: '20px'
             }}
         >
             Start
