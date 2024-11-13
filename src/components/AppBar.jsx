@@ -58,49 +58,50 @@ function AppBarPage() {
     return (
         <>
             <AppBar
-    position="static"
-    sx={{
-        background: 'linear-gradient(135deg, #D500F9 1%, #FF4081 100%)', // Gradiente fucsia
-    }}
->
-    <Container maxWidth="xl">
-        <Toolbar disableGutters>
-            <LocalLibraryIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <Typography
-                variant="h6"
-                noWrap
-                component="a"
-                href="/"
+                position="static"
                 sx={{
-                    mr: 2,
-                    display: { xs: 'none', md: 'flex' },
-                    fontFamily: 'monospace',
-                    fontWeight: 700,
-                    letterSpacing: '.3rem',
-                    color: 'inherit',
-                    textDecoration: 'none',
+                    background: 'linear-gradient(135deg, #D500F9 1%, #FF4081 100%)',
+                    display: { xs: 'none', sm: 'none', md: 'block' } // Ocultar en pantallas pequeñas
                 }}
             >
-                BIBLIOTECH
-            </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'right' }}>
-                {pages.map((page) => (
-                    <Button
-                        key={page.nombre}
-                        component={Link}
-                        to={page.path}
-                        onClick={page.onClick === 'handleOpenDialog' ? handleOpenDialog : undefined}
-                        sx={{ my: 2, color: 'white', display: 'block', textDecoration: 'none' }}
-                    >
-                        {page.nombre}
-                    </Button>
-                ))}
-            </Box>
-        </Toolbar>
-    </Container>
-</AppBar>
-
+                <Container maxWidth="xl">
+                    <Toolbar disableGutters>
+                        <LocalLibraryIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            component="a"
+                            href="/"
+                            sx={{
+                                mr: 2,
+                                display: { xs: 'none', md: 'flex' },
+                                fontFamily: 'monospace',
+                                fontWeight: 700,
+                                letterSpacing: '.3rem',
+                                color: 'inherit',
+                                textDecoration: 'none',
+                            }}
+                        >
+                            BIBLIOTECH
+                        </Typography>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'right' }}>
+                            {pages.map((page) => (
+                                <Button
+                                    key={page.nombre}
+                                    component={Link}
+                                    to={page.path}
+                                    onClick={page.onClick === 'handleOpenDialog' ? handleOpenDialog : undefined}
+                                    sx={{ my: 2, color: 'white', display: 'block', textDecoration: 'none' }}
+                                >
+                                    {page.nombre}
+                                </Button>
+                            ))}
+                        </Box>
+                    </Toolbar>
+                </Container>
+            </AppBar>
         </>
+
     );
 }
 export default AppBarPage;
