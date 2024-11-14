@@ -8,22 +8,26 @@ const ProjectMethodology = () => {
         <Container maxWidth="md" sx={{ mt: 4 }}>
             <Card
                 sx={{
-                    padding: { xs: 2, sm: 3, md: 4 },
-                    background: 'linear-gradient(135deg, #FFFFFF 40%, #E0F7FA)',
+                    padding: { xs: 3, sm: 4, md: 5 },
+                    background: 'linear-gradient(135deg, #0079E4 1%, #00B4D8 100%)',
                     borderRadius: '16px',
-                    boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
+                    boxShadow: '0px 6px 24px rgba(0, 0, 0, 0.3)',
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                     '&:hover': {
                         transform: 'scale(1.02)',
-                        boxShadow: '0px 6px 24px rgba(0, 0, 0, 0.2)',
+                        boxShadow: '0px 8px 28px rgba(0, 0, 0, 0.35)',
                     },
                 }}
             >
                 <Typography
                     variant="h4"
                     align="left"
-                    color="primary"
-                    sx={{ mb: 3, fontWeight: 'bold' }}
+                    sx={{
+                        mb: 3,
+                        fontWeight: 'bold',
+                        color: '#E3F2FD',
+                        textShadow: '2px 2px 6px rgba(0, 0, 0, 0.3)',
+                    }}
                 >
                     Metodología del Proyecto
                 </Typography>
@@ -54,18 +58,40 @@ const ProjectMethodology = () => {
                         content: 'La metodología combina la recolección y análisis de datos, el desarrollo iterativo y la participación colaborativa, creando un sistema avanzado que fomenta un entorno de aprendizaje didáctico y participativo, adaptado a las necesidades actuales.',
                     },
                 ].map((section, index) => (
-                    <Accordion key={index} sx={{ mb: 2, backgroundColor: '#f5f5f5' }}>
+                    <Accordion key={index} sx={{ mb: 2, background: 'linear-gradient(135deg, #E0F7FA, #f0f4f8)', boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.2)', borderRadius: '8px', overflow: 'hidden' }}>
                         <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
+                            expandIcon={<ExpandMoreIcon sx={{ color: '#0077b6' }} />}
                             aria-controls={`panel${index}-content`}
                             id={`panel${index}-header`}
+                            sx={{
+                                '& .MuiAccordionSummary-content': {
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                },
+                                '&:hover': {
+                                    backgroundColor: '#f1f9ff',
+                                },
+                            }}
                         >
-                            <Typography variant="h6" color="secondary" sx={{ fontWeight: 'bold' }}>
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    fontWeight: 'bold',
+                                    color: '#0077b6',
+                                    fontSize: '1.2rem',
+                                }}
+                            >
                                 {section.title}
                             </Typography>
                         </AccordionSummary>
                         <AccordionDetails>
-                            <Typography variant="body1" sx={{ color: '#4B6E9C' }}>
+                            <Typography
+                                variant="body1"
+                                sx={{
+                                    color: '#4B6E9C',
+                                    fontSize: '1rem',
+                                }}
+                            >
                                 {section.content}
                             </Typography>
                         </AccordionDetails>

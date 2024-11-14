@@ -1,5 +1,3 @@
-// ProjectMethodology.js
-
 import React from 'react';
 import { Box, Typography, Card, CardContent, Stepper, Step, StepLabel, Avatar } from '@mui/material';
 import { EmojiEvents as TrophyIcon, Book as BookIcon, School as SchoolIcon } from '@mui/icons-material';
@@ -15,7 +13,7 @@ const BibliotechStory = () => {
     {
       label: 'Fundación',
       description:
-      'Un taller de programación permitió a los estudiantes explorar tecnología e idear innovaciones. A pesar de las limitaciones, surgió la idea de modernizar la biblioteca escolar con un tótem interactivo para localizar libros, lo que dio origen al proyecto Biblioteca Inteligente, buscando transformar la biblioteca en un espacio educativo del siglo XXI y promover la colaboración entre estudiantes y docentes.',      
+        'Un taller de programación permitió a los estudiantes explorar tecnología e idear innovaciones. A pesar de las limitaciones, surgió la idea de modernizar la biblioteca escolar con un tótem interactivo para localizar libros, lo que dio origen al proyecto Biblioteca Inteligente, buscando transformar la biblioteca en un espacio educativo del siglo XXI y promover la colaboración entre estudiantes y docentes.',
       icon: <SchoolIcon sx={{ fontSize: { xs: 40, sm: 50, md: 60 }, color: '#FFD700' }} />
     },
     {
@@ -43,10 +41,15 @@ const BibliotechStory = () => {
       sx={{
         maxWidth: { xs: '100%', sm: '90%', md: '70%' },
         margin: 'auto',
-        padding: { xs: 2, sm: 3 },
-        backgroundColor: '#F3F7FF',
-        borderRadius: 3,
-        boxShadow: 4,
+        padding: { xs: 3, sm: 4 },
+        background: 'linear-gradient(135deg, #0079E4 1%, #00B4D8 100%)',
+        borderRadius: 4,
+        boxShadow: '0px 6px 30px rgba(0,0,0,0.3)',
+        transition: 'transform 0.3s ease',
+        '&:hover': {
+          transform: 'scale(1.01)',
+          boxShadow: '0px 8px 35px rgba(0,0,0,0.4)',
+        },
       }}
     >
       <Stepper orientation="vertical" activeStep={-1} connector={null}>
@@ -64,9 +67,10 @@ const BibliotechStory = () => {
                 variant="h5"
                 sx={{
                   fontWeight: 'bold',
-                  color: '#0077b6',
-                  textAlign: { xs: 'left', sm: 'left' },
-                  fontSize: { xs: '1.2rem', sm: '1.5rem' },
+                  color: '#E3F2FD',
+                  textAlign: 'left',
+                  fontSize: { xs: '1.3rem', sm: '1.6rem' },
+                  textShadow: '1px 1px 6px rgba(0,0,0,0.4)',
                   marginY: 1,
                 }}
               >
@@ -75,14 +79,15 @@ const BibliotechStory = () => {
             </StepLabel>
             <Card
               sx={{
-                background: 'linear-gradient(135deg, #FFFFFF 40%, #E0F7FA)',
-                boxShadow: '0px 4px 20px rgba(0,0,0,0.15)',
-                padding: { xs: 2, sm: 3 },
-                borderRadius: '12px',
+                background: 'linear-gradient(135deg, #FFFFFF 30%, #E3F2FD)',
+                boxShadow: '0px 4px 15px rgba(0,0,0,0.25)',
+                padding: { xs: 3, sm: 4 },
+                borderRadius: 3,
                 transition: 'transform 0.3s ease',
                 marginBottom: 3,
                 '&:hover': {
-                  transform: 'scale(1.02)',
+                  transform: 'scale(1.03)',
+                  boxShadow: '0px 6px 20px rgba(0,0,0,0.3)',
                 },
               }}
             >
@@ -90,8 +95,8 @@ const BibliotechStory = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: '#4B6E9C',
-                    fontSize: { xs: '0.95rem', sm: '1.1rem' },
+                    color: '#0d47a1',
+                    fontSize: { xs: '1rem', sm: '1.2rem' },
                     textAlign: 'left',
                   }}
                 >

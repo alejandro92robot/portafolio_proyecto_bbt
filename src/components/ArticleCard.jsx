@@ -15,7 +15,7 @@ const ArticleCard = ({ picture, category, title, description, author }) => {
             <Card
                 onClick={handleOpen}
                 sx={{
-                    background: 'linear-gradient(135deg, #3F51B5, #2196F3)', // Gradiente azul
+                    background: 'linear-gradient(135deg, #0079E4 1%, #00B4D8 100%)', // Gradiente azul
                     boxShadow: '0px 4px 20px rgba(0,0,0,0.3)',
                     borderRadius: '20px',
                     overflow: 'hidden',
