@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portafolio_proyecto_bbt/static/css/main.853696ae.css",
-    "main.js": "/portafolio_proyecto_bbt/static/js/main.b0ed87cb.js",
+    "main.js": "/portafolio_proyecto_bbt/static/js/main.ca1ccc3b.js",
     "static/js/453.8ab44547.chunk.js": "/portafolio_proyecto_bbt/static/js/453.8ab44547.chunk.js",
     "static/media/library_view2.jpg": "/portafolio_proyecto_bbt/static/media/library_view2.1e1bc9ee452b0fad0774.jpg",
     "static/media/totem_picture.jpg": "/portafolio_proyecto_bbt/static/media/totem_picture.532f00d01d366b1fa65a.jpg",
@@ -13,11 +13,11 @@
     "static/media/bibliotech.png": "/portafolio_proyecto_bbt/static/media/bibliotech.5930dcef6a300e4cb565.png",
     "index.html": "/portafolio_proyecto_bbt/index.html",
     "main.853696ae.css.map": "/portafolio_proyecto_bbt/static/css/main.853696ae.css.map",
-    "main.b0ed87cb.js.map": "/portafolio_proyecto_bbt/static/js/main.b0ed87cb.js.map",
+    "main.ca1ccc3b.js.map": "/portafolio_proyecto_bbt/static/js/main.ca1ccc3b.js.map",
     "453.8ab44547.chunk.js.map": "/portafolio_proyecto_bbt/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.853696ae.css",
-    "static/js/main.b0ed87cb.js"
+    "static/js/main.ca1ccc3b.js"
   ]
 }
