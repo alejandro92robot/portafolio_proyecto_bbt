@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portafolio_proyecto_bbt/static/css/main.853696ae.css",
-    "main.js": "/portafolio_proyecto_bbt/static/js/main.784cd202.js",
+    "main.js": "/portafolio_proyecto_bbt/static/js/main.b0ed87cb.js",
     "static/js/453.8ab44547.chunk.js": "/portafolio_proyecto_bbt/static/js/453.8ab44547.chunk.js",
     "static/media/library_view2.jpg": "/portafolio_proyecto_bbt/static/media/library_view2.1e1bc9ee452b0fad0774.jpg",
     "static/media/totem_picture.jpg": "/portafolio_proyecto_bbt/static/media/totem_picture.532f00d01d366b1fa65a.jpg",
@@ -10,14 +10,14 @@
     "static/media/library_view.jpg": "/portafolio_proyecto_bbt/static/media/library_view.e6f6d18cd269c25aaaf4.jpg",
     "static/media/pruebas.jpg": "/portafolio_proyecto_bbt/static/media/pruebas.48583eaa334a3bf7993e.jpg",
     "static/media/gamificacion.jpg": "/portafolio_proyecto_bbt/static/media/gamificacion.4928a6657da76e808acd.jpg",
-    "static/media/bibliotech.png": "/portafolio_proyecto_bbt/static/media/bibliotech.758f4c34aae4741c6ede.png",
+    "static/media/bibliotech.png": "/portafolio_proyecto_bbt/static/media/bibliotech.5930dcef6a300e4cb565.png",
     "index.html": "/portafolio_proyecto_bbt/index.html",
     "main.853696ae.css.map": "/portafolio_proyecto_bbt/static/css/main.853696ae.css.map",
-    "main.784cd202.js.map": "/portafolio_proyecto_bbt/static/js/main.784cd202.js.map",
+    "main.b0ed87cb.js.map": "/portafolio_proyecto_bbt/static/js/main.b0ed87cb.js.map",
     "453.8ab44547.chunk.js.map": "/portafolio_proyecto_bbt/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.853696ae.css",
-    "static/js/main.784cd202.js"
+    "static/js/main.b0ed87cb.js"
   ]
 }
