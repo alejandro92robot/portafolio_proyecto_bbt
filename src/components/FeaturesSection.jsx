@@ -43,7 +43,6 @@ const BibliotechStory = () => {
         margin: 'auto',
         padding: { xs: 3, sm: 4 },
         background: 'linear-gradient(135deg, #0079E4 1%, #00B4D8 100%)',
-        borderRadius: 4,
         boxShadow: '0px 6px 30px rgba(0,0,0,0.3)',
         transition: 'transform 0.3s ease',
         '&:hover': {

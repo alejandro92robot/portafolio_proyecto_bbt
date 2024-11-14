@@ -10,7 +10,6 @@ const ProjectMethodology = () => {
                 sx={{
                     padding: { xs: 3, sm: 4, md: 5 },
                     background: 'linear-gradient(135deg, #0079E4 1%, #00B4D8 100%)',
-                    borderRadius: '16px',
                     boxShadow: '0px 6px 24px rgba(0, 0, 0, 0.3)',
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                     '&:hover': {
